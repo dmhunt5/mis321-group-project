@@ -6,11 +6,11 @@ namespace mis321_group_project.api
 
         public ConnectionString()
         {
-            string server = "lyn7gfxo996yjjco.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-            string database = "	j389p0jal1h2a1bk";
+            string server = "acw2033ndw0at1t7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+            string database = "fv960uqrfmsdprn6";
             string port = "3306";
-            string userName = "v8rdv1d79ya2dkn7";
-            string password = "hb696z5ycb2o509d";
+            string userName = "baog8n9gupkcnra4";
+            string password = "qp8lbpmlxrpertfm";
             string dateTimeConvert = "True";
 
             cs = $@"server = {server};user = {userName};database = {database};port = {port};password = {password};Convert Zero Datetime = {dateTimeConvert};";
