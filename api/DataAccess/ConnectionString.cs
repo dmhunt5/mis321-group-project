@@ -3,6 +3,12 @@ namespace mis321_group_project.api
     public class ConnectionString
     {
         public string cs {get; set;}
+        private string database {get; set;}
+        private string port {get; set;}
+        private string userName{get; set;}
+        private string password{get; set;}
+        private string dateTimeConvert{get; set;}
+
 
         public ConnectionString()
         {
