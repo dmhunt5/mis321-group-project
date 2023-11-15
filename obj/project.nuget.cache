@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "1H3AmO94vTi0tslufEkQbVHkxXls4bpknTAR/E2AZ062/Sy7/0Ee3hu7bRy8XRhpbZ+5k+18TfIN3/ZrhrVb9A==",
+  "dgSpecHash": "1ydjI3cMOfUjNEvLFYGBs+u+yUa+JCF1KGO6pYNgDXgK4Gw0baLYzLO/TQvHXcYm0JlNHB4gBExR5GRCVfj6ug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\FinalProject\\mis321-group-project\\mis321-group-project.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/caitlinjohnson/Documents/mis321/tsa/mis321-group-project/mis321-group-project.csproj",
+  "expectedPackageFiles": [
+    "/Users/caitlinjohnson/.nuget/packages/microsoft.aspnetcore.openapi/7.0.0/microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
+    "/Users/caitlinjohnson/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/caitlinjohnson/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/caitlinjohnson/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/Users/caitlinjohnson/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/Users/caitlinjohnson/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/Users/caitlinjohnson/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
   "logs": []
 }

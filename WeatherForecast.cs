@@ -1,4 +1,4 @@
-namespace Controllers;
+namespace mis321_group_project;
 
 public class WeatherForecast
 {
