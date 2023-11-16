@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/caitlinjohnson/Documents/mis321/tsa/mis321-group-project/api/mis321-group-project.csproj": {}
+    "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\FinalProject\\mis321-group-project\\api\\mis321-group-project.csproj": {}
   },
   "projects": {
-    "/Users/caitlinjohnson/Documents/mis321/tsa/mis321-group-project/api/mis321-group-project.csproj": {
+    "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\FinalProject\\mis321-group-project\\api\\mis321-group-project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/caitlinjohnson/Documents/mis321/tsa/mis321-group-project/api/mis321-group-project.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\FinalProject\\mis321-group-project\\api\\mis321-group-project.csproj",
         "projectName": "mis321-group-project",
-        "projectPath": "/Users/caitlinjohnson/Documents/mis321/tsa/mis321-group-project/api/mis321-group-project.csproj",
-        "packagesPath": "/Users/caitlinjohnson/.nuget/packages/",
-        "outputPath": "/Users/caitlinjohnson/Documents/mis321/tsa/mis321-group-project/api/obj/",
+        "projectPath": "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\FinalProject\\mis321-group-project\\api\\mis321-group-project.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\FinalProject\\mis321-group-project\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/caitlinjohnson/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -49,6 +49,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "mysql.data": {
+              "target": "Package",
+              "version": "[8.2.0, )"
             }
           },
           "imports": [
@@ -70,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
