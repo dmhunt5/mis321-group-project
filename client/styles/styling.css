@@ -1,0 +1,62 @@
+
+.banner1{
+    background-color:mediumpurple;
+    color: white;
+    text-align:center;
+    padding: 40px 0px;
+    font-size: larger;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header1{
+    margin-top:10px;
+    text-align:center;
+    color:#333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+  
+div.scroll-container img {
+    padding: 10px;
+}
+
+#scrollpic{
+    height: 500px;
+    width: 650px;
+}
+
+#login{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* or any color you prefer */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.header2{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+      
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0801c2, 0 0 40px #0801c2, 0 0 50px #0801c2, 0 0 60px #0801c2, 0 0 70px #0801c2;
+        }
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 30px #4d77ff, 0 0 40px #4d77ff, 0 0 50px #4d77ff, 0 0 60px #4d77ff, 0 0 70px #4d77ff, 0 0 80px #4d77ff;
+        }
+}
