@@ -40,13 +40,28 @@ div.scroll-container img {
     border-radius: 8px;
     margin-top: 20px;
 }
+.banner2{
+    background-color:mediumpurple;
+    color: white;
+    text-align:center;
+    padding: 80px 0px;
+    font-size: larger;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+#dropdown{
+    float: left;
+    padding: 95px;
+}
+ 
 
 .header2{
+    margin-top: 30px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-        font-size: 30px;
+        font-size: 200px;
         color: #fff;
-        text-align: center;
+        text-align:left;
         -webkit-animation: glow 1s ease-in-out infinite alternate;
         -moz-animation: glow 1s ease-in-out infinite alternate;
         animation: glow 1s ease-in-out infinite alternate;
@@ -54,9 +69,9 @@ div.scroll-container img {
       
       @-webkit-keyframes glow {
         from {
-          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0801c2, 0 0 40px #0801c2, 0 0 50px #0801c2, 0 0 60px #0801c2, 0 0 70px #0801c2;
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c201b2, 0 0 40px #c201b2, 0 0 50px #c201b2, 0 0 60px #c201b2, 0 0 70px #c201b2;
         }
         to {
-          text-shadow: 0 0 20px #fff, 0 0 30px #4d77ff, 0 0 40px #4d77ff, 0 0 50px #4d77ff, 0 0 60px #4d77ff, 0 0 70px #4d77ff, 0 0 80px #4d77ff;
+          text-shadow: 0 0 20px #fff, 0 0 30px #fd74d1, 0 0 40px #fd74d1, 0 0 50px #fd74d1, 0 0 60px #fd74d1, 0 0 70px #fd74d1, 0 0 80px #fd74d1;
         }
 }
