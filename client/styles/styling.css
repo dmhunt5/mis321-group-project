@@ -59,7 +59,6 @@ div.scroll-container img {
     margin-top: 30px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-        font-size: 200px;
         color: #fff;
         text-align:left;
         -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -69,9 +68,45 @@ div.scroll-container img {
       
       @-webkit-keyframes glow {
         from {
-          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c201b2, 0 0 40px #c201b2, 0 0 50px #c201b2, 0 0 60px #c201b2, 0 0 70px #c201b2;
+          text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #c201b2, 0 0 50px #c201b2, 0 0 60px #c201b2, 0 0 70px #c201b2, 0 0 80px #c201b2;
         }
         to {
-          text-shadow: 0 0 20px #fff, 0 0 30px #fd74d1, 0 0 40px #fd74d1, 0 0 50px #fd74d1, 0 0 60px #fd74d1, 0 0 70px #fd74d1, 0 0 80px #fd74d1;
+          text-shadow: 0 0 20px #fff, 0 0 30px #fa88d6, 0 0 40px #fa88d6, 0 0 50px #fa88d6, 0 0 60px #fa88d6, 0 0 70px #fa88d6, 0 0 80px #fa88d6;
         }
+}
+
+.checkoutButton{
+    height: 40px;
+    width: 40px;
+    border: 0px;
+}
+
+.bannerLogo{
+    height: 150px;
+    width: 150px;
+}
+
+.formContainer {
+    position: relative;
+    margin: 8% auto;
+    min-height: 60%;
+    width: 50%;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+    background:#ffffff;
+    padding: 0px 0px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.teamForm{
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align:center;
+}
+
+.homeButton{
+    height: 40px;
+    width: 40px;
+    border: 0px;
+    align-items:flex-start;
 }
