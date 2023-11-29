@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Cors;
-using Microsoft.Extensions.Options;
+using System;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("OpenPolicy",
@@ -38,5 +39,3 @@ app.UseCors("OpenPolicy");
 app.MapControllers();
 
 app.Run();
-
-//test
