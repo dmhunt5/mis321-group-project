@@ -8,18 +8,33 @@ namespace api.Models
 {
     public class ChildUtility
     {
-        
-        // public void addPlayerToTeam(){
-        //     Database db = new Database();
-        //     MySqlConnection con = new MySqlConnection(db.cs);
-        //     con.Open();
-        //     string stm = @"INSERT INTO child(teamid)
-        //     VALUES(@teamname, @sportid)";
-        //     MySqlCommand cmd = new MySqlCommand(stm, con);
-        //     cmd.Parameters.AddWithValue("@teamid", team.teamid);
-        //     cmd.Prepare();
-        //     cmd.ExecuteNonQuery();
-        //     con.Close();
-        //}
+        public void addPlayerToTeam(Child child){
+            Database db = new Database();
+            MySqlConnection con = new MySqlConnection(db.cs);
+            con.Open();
+            string stm ="UPDATE child SET teamid = @teamid WHERE firstname = @firstname AND lastname = @lastname";
+            MySqlCommand cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@teamid", child.teamid);
+            cmd.Parameters.AddWithValue("@firstname", child.firstname);
+            cmd.Parameters.AddWithValue("@lastname", child.lastname);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public static void removePlayerFromTeam(Child child){
+            Database db = new Database();
+            MySqlConnection con = new MySqlConnection(db.cs);
+            con.Open();
+            string stm =@"UPDATE child SET teamid = null WHERE firstname = @firstname and lastname = @lastname;";
+            MySqlCommand cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@teamid", child.teamid);
+            cmd.Parameters.AddWithValue("@firstname", child.firstname);
+            cmd.Parameters.AddWithValue("@lastname", child.lastname);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+        }
     }
 }

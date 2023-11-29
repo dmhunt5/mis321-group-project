@@ -23,11 +23,11 @@ namespace api.Controllers
         }
         //GET: api/User/5
         //[Route("{teamname}/{playername}")]
-        [HttpGet("{teamname}/{playername}")]
-        public int Get(string teamname, string playername)
+        [HttpGet("{teamname}")]
+        public int Get(string teamname)
         {
             TeamUtility utility = new TeamUtility();
-            return utility.GetTeamId(teamname, playername);
+            return utility.GetTeamId(teamname);
             
         }
 

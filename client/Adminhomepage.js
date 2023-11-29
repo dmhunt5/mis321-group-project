@@ -64,7 +64,7 @@ let html =`
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#" onclick = "handleClickForAdd()" >Create a Team</a></li>
-            <li><a class="dropdown-item" href="#">Add Players to Team</a></li>
+            <li><a class="dropdown-item" href="#" onclick = "handleClickForPlayerAdd()" >Add Players to Team</a></li>
             <li><a class="dropdown-item" href="#">Remove Players from Team</a></li>
           </ul>
         </li>
@@ -83,6 +83,10 @@ document.getElementById('app2').innerHTML=html;
 
 async function handleClickForAdd(){
   window.location.href = "./createTeam.html"
+}
+
+async function handleClickForPlayerAdd(){
+  window.location.href ="./AddPlayer.html"
 }
 
 // async function populateTable(){

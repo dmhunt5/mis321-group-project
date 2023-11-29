@@ -9,10 +9,18 @@ async function onLoad(){
         <img src= "./styles/LOGO TSP.png" class="bannerLogo">
     </div>  
 
+    <button onclick = "handleBackToHome()">
+    <img src="./styles/home.png" class ="checkoutButton">
+    </button>
+    <div>
+        <h1 id= "header">Add Players To Teams Below</h1>
+    </div>
     <form onsubmit="return false" class="formContainer">
         <div class ="teamForm">
-            <label>Enter Player's Name</label><br>
-            <input type="text" id="playername" name="playername"><br>
+            <label>Enter Player's First Name</label><br>
+            <input type="text" id="playerfirstname" name="playerfirstname"><br>
+            <label>Enter Player's Last Name</label><br>
+            <input type="text" id="playerlastname" name="playerlastname"><br>
             <label>Enter Team Name</label><br>
             <input type="text" id="teamname" name="teamname"><br>
             <div class="dropdown">
@@ -33,10 +41,13 @@ async function onLoad(){
 
 async function handlePlayerAdd(){
     const teamname = document.getElementById('teamname').value;
-    const playername = document.getElementById('playername').value
+    const playerfirstname = document.getElementById('playerfirstname').value
+    const playerlastname = document.getElementById('playerlastname').value
       console.log(teamname);
-      console.log(playername);
-   const response = await fetch(teamurl + teamname + "/" + playername,{
+      console.log(playerfirstname);
+      console.log(playerlastname);
+
+   const response = await fetch(teamurl + teamname,{
         method: "GET",
         headers: {
             accepts: '*/*',
@@ -47,20 +58,30 @@ async function handlePlayerAdd(){
    const data = await response.json();
    console.log(data)
     
-   let team = {
-
+   let child = {
+    childid: 0,
+    dateofbirth: "nothing",
+    firstname: playerfirstname,
+    lastname: playerlastname,
+    sportid: 0,
     teamid: data,
-    playername: playername
     };
 
-    myPlayers.push(team);
+    myPlayers.push(child);
     await fetch(playerurl,{
-    method: "POST",
-    headers: {
-        accepts: '*/*',
-        "Content-type" : "application/json"
-    },
-    body: JSON.stringify(team),
-})
+        method: "PUT",
+        headers: {
+            accepts: '*/*',
+            "Content-type" : "application/json"
+        },
+        body: JSON.stringify(child),
+    })
    
-    }
+    document.getElementById('playerfirstname').value='';
+    document.getElementById('playerlastname').value='';
+    document.getElementById('teamname').value='';
+ }
+
+ async function handleBackToHome(){
+    window.location.href = "./Adminhomepage.html"
+}

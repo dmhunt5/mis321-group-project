@@ -11,6 +11,9 @@ async function handleOnLoadFive(){
     <button onclick = "handleBackToHome()">
         <img src="./styles/home.png" class ="checkoutButton">
     </button>
+    <div>
+        <h1 id= "header">Create Teams Below</h1>
+    </div>
     <form onsubmit="return false" class="formContainer">
         <div class ="teamForm">
             <label>Enter Team Name</label><br>

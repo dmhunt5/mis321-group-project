@@ -31,26 +31,24 @@ namespace api.Controllers
 
         // POST: api/User
         [HttpPost]
-        public void Post([FromBody] Team value)
+        public void Post([FromBody] Child value)
         {
-            TeamUtility utility = new TeamUtility();
-            utility.CreateTeam(value);
+        
         }
 
         // PUT: api/User
         [HttpPut]
-        public void Put([FromBody] string nothing)
+        public void Put([FromBody] Child value)
         {   
-           
-            
+            ChildUtility utility = new ChildUtility();
+            utility.addPlayerToTeam(value);
         }
 
         // DELETE: api/User
         [HttpDelete]
-        public void Delete([FromBody] string nothing)
+        public void Delete([FromBody] Child child)
         {
-           
-           
+           ChildUtility.removePlayerFromTeam(child);
         }
     }
 }

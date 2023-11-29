@@ -46,7 +46,7 @@ namespace api.Models
             return myTeams;
         }
 
-        public int GetTeamId(string teamname, string playername){
+        public int GetTeamId(string teamname){
             Database db = new Database();
             string cs = db.cs;
             MySqlConnection con = new MySqlConnection(db.cs);
