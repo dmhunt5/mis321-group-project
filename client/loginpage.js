@@ -4,6 +4,7 @@ let myUsers = []
 async function handleOnLoad(){
 
 let html = `
+<div id="pagebackground">
 <div class= "banner1"> 
 <h1>Tuscaloosa Sports Association</h1>
 </div>
@@ -45,6 +46,7 @@ let html = `
 
 <div class="header1">
     <h1>Registration for both softball and baseball costs $5</h1>
+</div>
 </div>
 `
 document.getElementById('app').innerHTML=html; 

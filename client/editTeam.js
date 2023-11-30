@@ -4,16 +4,16 @@ let myPlayers = []
 
 async function handleEditOnLoad(){
     let html = `
-    <div class= "banner1"> 
-        <img src= "./styles/LOGO TSP.png" class="bannerLogo">
-    </div>  
-
-    <button onclick = "handleBackToHome()">
+    <div id="pagebackground">
+    <div class="card" id ="card">
+        <h5 class="card-header">Tuscaloosa Sports Association</h5>
+        <div class="card-body">
+        <h5 class="card-title">Remove Players from Teams</h5>
+        <p class="card-text">To remove players from teams enter their first name, last name, team name, and sport type below</p>
+        <button onclick = "handleBackToHome()" class = "homebutton">
         <img src="./styles/home.png" class ="checkoutButton">
-    </button>
-
-    <div>
-        <h1 id= "header">Remove Players from Teams Below</h1>
+        </button>
+        </div>
     </div>
 
     <form onsubmit="return false" class="formContainer">
@@ -35,6 +35,9 @@ async function handleEditOnLoad(){
         <button onclick= "handlePlayerDelete()">Submit</button>
     </div>
     </form> 
+    </div> <br><br><br>
+    <img src="./styles/LOGO TSP.png" class="smallLogo"> 
+    </div>
     `
     document.getElementById("appEditTeam").innerHTML=html;
 }

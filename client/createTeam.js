@@ -4,15 +4,16 @@ let myTeams =[]
 async function handleOnLoadFive(){
     let html = `
        
-    <div class= "banner1"> 
-       
-        <img src= "./styles/LOGO TSP.png" class="bannerLogo">
-    </div>  
-    <button onclick = "handleBackToHome()">
+    <div id="pagebackground">
+    <div class="card" id ="card">
+        <h5 class="card-header">Tuscaloosa Sports Association</h5>
+        <div class="card-body">
+        <h5 class="card-title">Create Teams</h5>
+        <p class="card-text">To create teams enter their name and sport type below</p>
+        <button onclick = "handleBackToHome()" class = "homebutton">
         <img src="./styles/home.png" class ="checkoutButton">
-    </button>
-    <div>
-        <h1 id= "header">Create Teams Below</h1>
+        </button>
+        </div>
     </div>
     <form onsubmit="return false" class="formContainer">
         <div class ="teamForm">
@@ -29,7 +30,9 @@ async function handleOnLoadFive(){
             <button onclick= "handleTeamAdd()">Submit</button>
         </div>
     </form> 
-   
+    </div> <br><br><br>
+    <img src="./styles/LOGO TSP.png" class="smallLogo"> 
+    </div>
   
     
     `
