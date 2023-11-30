@@ -74,8 +74,22 @@ let html =`
 </nav>
 <div class="header2">
     <h1> Teams </h1>
-</div>
-`
+</div>`
+
+// <div id="teamPlayerContainer"></div>
+
+//         fetch('fetch_data.php')
+//             .then(response => response.json())
+//             .then(data => {
+              
+//                 const container = document.getElementById('teamPlayerContainer');
+//                 data.forEach(item => {
+//                     container.innerHTML += `<p><strong>${item.team_name}</strong>: ${item.player_name}</p>`;
+//                 });
+//             })
+//             .catch(error => console.error('Error fetching data:', error));
+  
+
 
 document.getElementById('app2').innerHTML=html;
 //populateTable();

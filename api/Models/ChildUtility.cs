@@ -36,5 +36,9 @@ namespace api.Models
             con.Close();
 
         }
+
+        public static void GetPlayerNames(){
+            
+        }
     }
 }
