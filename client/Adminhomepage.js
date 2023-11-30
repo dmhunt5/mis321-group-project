@@ -142,6 +142,15 @@ async function handleClickForPlayerAdd(){
 async function populateDropdown(data) {
   const dropdown = document.getElementById('myDropdown');
 
+  dropdown.addEventListener('change', function(event) {
+    // The value of the selected option is available in event.target.value
+    const selectedValue = event.target.value;
+    //table stuff goes here 
+
+
+    console.log('Selected value:', selectedValue);
+  // You can add more functionality here based on the selected value
+});
 
   // Clear existing options
   dropdown.innerHTML = '';
