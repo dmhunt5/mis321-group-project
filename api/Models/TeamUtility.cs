@@ -35,8 +35,9 @@ namespace api.Models
             {
                 while(rdr.Read()){
                    Team team  = new Team(){
-                    
-                        teamname = rdr.GetString(0),
+                        teamid = rdr.GetInt32(0),
+                        teamname = rdr.GetString(1),
+                        sportid= rdr.GetInt32(2)
                    };
                     myTeams.Add(team);
                 }
