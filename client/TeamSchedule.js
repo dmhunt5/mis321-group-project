@@ -40,11 +40,11 @@ function handleOnLoad()
         if(monthNum == d.getMonth() && i == d.getDate())
         {
             html += `
-            <li><button type="button" onclick="handleOnClick()" class="btn btn-warning">${i}</button></li>`
+            <li><button type="button" onclick="handleOnClick(${i}, ${monthNum}, ${year})" class="btn btn-warning">${i}</button></li>`
         }
         else{
             html += `
-            <li><button type="button" onclick="handleOnClick()" id="dayButton" class="btn btn-light">${i}</button></li>
+            <li><button type="button" onclick="handleOnClick(${i}, ${monthNum}, ${year})" id="dayButton" class="btn btn-light">${i}</button></li>
             `;
         }
     }
@@ -89,12 +89,12 @@ function movePrevMonth()
         if(monthNum == d.getMonth() && i == d.getDate())
         {
             html += `
-            <li><button type="button" onclick="handleOnClick()" class="btn btn-warning">${i}</button></li>`
+            <li><button type="button" onclick="handleOnClick(${i}, ${monthNum}, ${year})" class="btn btn-warning">${i}</button></li>`
         }
         else
         {
             html += `
-            <li><button type="button" onclick="handleOnClick()" id="dayButton" class="btn btn-light">${i}</button></li>
+            <li><button type="button" onclick="handleOnClick(${i}, ${monthNum}, ${year})" id="dayButton" class="btn btn-light">${i}</button></li>
             `;
         }
     }
@@ -137,11 +137,14 @@ function moveNextMonth()
         if(monthNum == d.getMonth() && i == d.getDate())
         {
             html += `
-            <li><button type="button" onclick="handleOnClick()" class="btn btn-warning">${i}</button></li>`
+            <li><button type="button" onclick="handleOnClick(${i}, ${monthNum}, ${year})" class="btn btn-warning">${i}</button></li>`
         }
-        html += `
-        <li><button type="button" onclick="handleOnClick()" id="dayButton" class="btn btn-light">${i}</button></li>
-        `;
+        else
+        {
+            html += `
+            <li><button type="button" onclick="handleOnClick(${i}, ${monthNum}, ${year})" id="dayButton" class="btn btn-light">${i}</button></li>
+            `;
+        }
     }
 
     document.getElementById("days").innerHTML = html;
@@ -156,18 +159,19 @@ async function getTeamSchedules()
     console.log(events);
 }
 
-function handleOnClick()
+function handleOnClick(day, month, year)
 {
+    console.log(events)
     let html=`
     <div id="tableBody"></div>
     
     <form onsubmit="return false">
-        <label for="dateOfGame">Date of game (YYYY-MM-DD):</label><br>
+        <label for="dateOfGame">Date of game (DD-MM-YYYY):</label><br>
         <input type="text" id="dateOfGame" name="dateOfGame"><br>
         <label for="timeOfGame">Time of game (00:00):</label><br>
         <input type="text" id="timeOfGame" name="timeOfGame"><br>
         <label for="teamId">Team 1 ID</label><br>
-        <input type="text" id="teamId" name="teamId">
+        <input type="text" id="teamId" name="teamId"><br>
         <label for="opponentId">Team 2 ID</label><br>
         <input type="text" id="opponentId" name="opponentId">
         <button onclick="addGame()" class="btn btn-primary">Save</button>
@@ -182,16 +186,23 @@ function handleOnClick()
             <th>Team 1 ID</th>
             <th>Team 2 ID</th>
         </tr>`;
-    events.forEach(function(event, index) {
-        html += `
-        <tr>
-        <td>${event.DateOfGame}</td>
-        <td>${event.TimeOfGame}</td>
-        <td>${event.TeamId}</td>
-        <td>${event.OpponentId}</td>
-        
-        <td><button class="btn btn-danger" onclick="deleteExercise('${event.id}')">Delete</button></td>
-        </tr>`;
+    console.log(events);
+    console.log(day, month, year);
+    events.forEach(function(event) {
+        let eventdates = event.dateOfGame.split("-");
+        console.log(eventdates, "EVENT DATES")
+        if(eventdates[0] == day && eventdates[1] == month + 1 && eventdates[2] == year)
+        {
+            html += `
+            <tr>
+            <td>${event.dateOfGame}</td>
+            <td>${event.timeOfGame}</td>
+            <td>${event.teamId}</td>
+            <td>${event.opponentId}</td>
+            
+            <td><button class="btn btn-danger" onclick="deleteEvent('${event.gameId}')">Delete</button></td>
+            </tr>`;
+        }
     })
     html+=`</table>`
     document.getElementById('tableBody').innerHTML = html;

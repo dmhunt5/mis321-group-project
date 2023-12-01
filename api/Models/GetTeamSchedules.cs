@@ -28,11 +28,11 @@ namespace api.DataAccess
             while(reader.Read())
             {
                 TeamSchedule teamSchedule = new TeamSchedule();
-                teamSchedule.GameId = reader.GetInt16("Id");
-                teamSchedule.DateOfGame = reader.GetDateTime("DateOfGame");
-                teamSchedule.TimeOfGame = reader.GetInt16("TimeOfGame");
-                teamSchedule.TeamId = reader.GetInt16("TeamId");
-                teamSchedule.OpponentId = reader.GetInt16("OpponentId");
+                teamSchedule.GameId = reader.GetInt16("gameid");
+                teamSchedule.DateOfGame = reader.GetString("dateofgame");
+                teamSchedule.TimeOfGame = reader.GetString("timeofgame");
+                teamSchedule.TeamId = reader.GetInt16("teamid");
+                teamSchedule.OpponentId = reader.GetInt16("opponentid");
                 teamSchedules.Add(teamSchedule);
             }
 
