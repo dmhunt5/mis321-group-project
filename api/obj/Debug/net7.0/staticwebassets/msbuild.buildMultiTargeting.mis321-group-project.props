@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\mis321-group-project.props" />
+  <Import Project="../build/mis321-group-project.props" />
 </Project>

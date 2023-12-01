@@ -1,4 +1,5 @@
 const url = "http://localhost:5291/api/Team/"
+const playerUrl =  "http://localhost:5291/api/Child/"
 let myTeams = []
 
 async function handleOnLoadTwo(){
@@ -89,8 +90,13 @@ let html =`
 
 <div class="header2">
     <h1> Teams </h1>
-</div>`
+</div>
 
+<table id="playerTable">
+</table>
+
+<div id="detailsContainer"></div>
+`
 // <div id="teamPlayerContainer"></div>
 
 //         fetch('fetch_data.php')
@@ -158,9 +164,30 @@ async function handleReportCreate(){
 async function populateDropdown(data) {
   const dropdown = document.getElementById('myDropdown');
 
-  dropdown.addEventListener('change', function(event) {
+  dropdown.addEventListener('change', async function(event) {
     // The value of the selected option is available in event.target.value
     const selectedValue = event.target.value;
+
+    playersTable = document.getElementById('playersTable');
+    detailsContainer = document.getElementById('detailsContainer')
+    
+
+  
+      const dataResponse = await fetch(url + data.teamname);
+      const teamid = await dataResponse.json();
+
+      const playersResponse = await fetch(playerUrl + teamid);
+      const playersData = await playersResponse.json();
+      
+      playersData.forEach(player =>{
+        playersTable.innerHTML += `
+        <tr>
+            <td>${playersData.name}</td>
+
+        </tr>`
+      });
+    
+   
     //table stuff goes here 
     //api call here and then log it 
     //do a get then populate a table that has a header of Player's Names and then each row is a players name

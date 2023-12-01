@@ -37,8 +37,26 @@ namespace api.Models
 
         }
 
-        public static void GetPlayerNames(){
-
+        public static List<Child> GetPlayerNames(int teamid){
+            Database db = new Database();
+            string cs = db.cs;
+            MySqlConnection con = new MySqlConnection(db.cs);
+            con.Open();
+            List<Child> myPlayers = new List<Child>();
+            string stm = "SELECT firstname, lastname from child WHERE teamid = @teamid";
+            using MySqlCommand cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@teamid", teamid);
+            using MySqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read()){
+                Child player = new Child(){
+                    firstname = rdr.GetString(0),
+                    lastname = rdr.GetString(1)
+                };
+                myPlayers.Add(player);
+                
+            }
+            con.Close();
+            return myPlayers;
         }
 
         public void createChild(Child child){

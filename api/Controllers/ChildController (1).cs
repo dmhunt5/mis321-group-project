@@ -21,12 +21,14 @@ namespace api.Controllers
             List<Team> teams = TeamUtility.GetAllTeams();
             return teams;
         }
-        // GET: api/User/5
-        //[Route("{userName}/{password}")]
-        // [HttpGet("{username}/{password}")]
-        // public int Get(string nothing)
+        //GET: api/User/5
+        //[Route("{teamid}")]
+        // [HttpGet("{teamid}")]
+        // public int Get(int value)
         // {
-            
+        //     ChildUtility utility = new ChildUtility();
+        //     List<Child> players = utility.GetPlayerNames(value);
+        //     return players;
         // }
 
         // POST: api/User
@@ -35,6 +37,7 @@ namespace api.Controllers
         {
             ChildUtility utility = new ChildUtility();
             utility.createChild(value);
+            
         }
 
         // PUT: api/User
