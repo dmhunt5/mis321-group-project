@@ -26,11 +26,11 @@ namespace api.Models
             Database db = new Database();
             MySqlConnection con = new MySqlConnection(db.cs);
             con.Open();
-            string stm = "insert into customer (volunteerrole, gameid) values ( @volunteerrole, @gameid);";
+            string stm = "insert into customer (volunteerrole, gameid, sportid) values ( @volunteerrole, @gameid, @sportid);";
             MySqlCommand cmd = new MySqlCommand(stm, con);
             cmd.Parameters.AddWithValue("@volunteerrole", customer.volunteerrole);
             cmd.Parameters.AddWithValue("@gameid", customer.gameid);
-            
+            cmd.Parameters.AddWithValue("@sportid", customer.sportid);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
             con.Close();
