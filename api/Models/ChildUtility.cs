@@ -38,7 +38,23 @@ namespace api.Models
         }
 
         public static void GetPlayerNames(){
-            
+
+        }
+
+        public void createChild(Child child){
+            Database db = new Database();
+            MySqlConnection con = new MySqlConnection(db.cs);
+            con.Open();
+            string stm = @"INSERT INTO child(firstname, lastname, dateofbirth, sportid)
+            VALUES(@firstname, @lastname, @dateofbirth, @sportid)";
+            MySqlCommand cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@firstname", child.firstname);
+            cmd.Parameters.AddWithValue("@lastname", child.lastname);
+            cmd.Parameters.AddWithValue("@dateofbirth", child.dateofbirth);
+            cmd.Parameters.AddWithValue("@sportid", child.sportid);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

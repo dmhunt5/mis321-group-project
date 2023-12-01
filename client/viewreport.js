@@ -1,52 +1,49 @@
 let count = 0;
-let myActivities = [];
+let myReports = [];
+const url = "http://localhost:5291/api/Report/"
 
-function handleOnLoad() {
-    myActivities = JSON.parse(localStorage.getItem('myActivities'));
-    console.log(myActivities);
-    let html=`
-    <nav class="navbar">
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact Us</a></li>
-        </ul>
-    </nav>
-    <div class="banner">
-        <h1>TideFit Fitness Tracker</h1>
-        <img src="./images/bigal.png" id="small-big-al">
-        <p>Take control of your fitness journey!</p>
+async function handleOnLoad() {
+    let response = await fetch(url)
+    myReports = await response.json()
+    let html =`
+    <div id="pagebackground">
+    <div class="banner2">
+        <img src="./styles/LOGO TSP.png" class="bannerLogo">
     </div>
-    <br>`;
-    document.getElementById('viewreport1').innerHTML=html;
-    populateTable();
-}
-
-
-function populateTable() {
-    let html=`
-    <table class="table table-striped" style="width:100%">
+    <button onclick = "handleBackToHome()" class = "homebutton">
+        <img src="./styles/home.png" class ="checkoutButton">
+        </button>
+        </div>
+    <div class="card" id ="card2">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Date</th>
-                <th>Activity Type</th>
-                <th>Distance (Miles)</th>
-                <th>Pinned Activities</th>
-                <th>Delete Activity</th>
+                <th>Baseball Registration Count</th>
+                <th>Softball Registration Count</th>
+                <th>Extra Comments</th>
+            
             </tr>
-        </thead>`;
-    // myActivities.forEach(function(activity) {
-    //     if(activity.Distance==undefined) {
-    //         activity.Distance = 0;
-    //     }
-    //     html += `
-    //     <tr>
-    //         <td>${activity.Date}</td>
-    //         <td>${activity.ActivityType}</td>
-    //         <td>${activity.Distance}</td>
-    //         <td><button class="deleteBtn"><img src="./images/xbutton.png" id="table-button"></button></td>
-    //     </tr>`;
-    // })
-    html += `</table>`;
-    document.getElementById('tableBody').innerHTML = html;
+        </thead>
+        <tbody>`;
+    myReports.forEach(function(report) {
+        html += `
+        <tr>
+            <td>${report.repdate}</td>
+            <td>${report.bballreg}</td>
+            <td>${report.sballreg}</td>
+            <td>${report.repcomments}</td>
+        </tr>`
+    });
+    html+= `</tbody></table>
+    </div><
+    </div>
+    <div id="pagebackground"> <br><br><br><br><br><br><br><br><br><br></div>`;
+   
+    
+    document.getElementById('viewreport1').innerHTML=html; 
+} 
+
+async function handleBackToHome(){
+    window.location.href = "./Employeehomepage.html"
 }

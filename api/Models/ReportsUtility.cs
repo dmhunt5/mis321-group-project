@@ -24,6 +24,31 @@ namespace api.Models
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        public static List<Reports> getReports(){
+            Database db = new Database();
+            MySqlConnection con = new MySqlConnection(db.cs);
+            con.Open();
+            
+            List<Reports> myReports = new List<Reports>();
+            string stm = "SELECT * from reports";
+            using MySqlCommand cmd = new MySqlCommand(stm, con);
+            using (MySqlDataReader rdr = cmd.ExecuteReader())
+            {
+                while(rdr.Read()){
+                   Reports reports  = new Reports(){
+                        repdate = rdr.GetDateTime(0),
+                        bballreg = rdr.GetInt32(1),
+                        sballreg= rdr.GetInt32(2),
+                        repcomments = rdr.GetString(3)
+                   };
+                    myReports.Add(reports);
+                }
+            }
+            
+            con.Close();
+            return myReports;
+        }
       
     }
 }

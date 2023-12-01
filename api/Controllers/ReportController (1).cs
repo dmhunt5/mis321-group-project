@@ -14,12 +14,13 @@ namespace api.Controllers
     [ApiController]
     public class ReportController : ControllerBase
     {
-       // GET: api/User
-        // [HttpGet]
-        // public List<Customer> Get()
-        // {
-            
-        // }
+       //   GET: api/User
+        [HttpGet]
+        public List<Reports> Get()
+        {
+            List<Reports> reports = ReportsUtility.getReports();
+            return reports;
+        }
         //GET: api/User/5
         //[Route("{teamname}/{playername}")]
         // [HttpGet("{teamname}")]

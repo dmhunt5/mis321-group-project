@@ -64,7 +64,7 @@ async function handlePlayerDelete(){
 
     let child = {
         childid: 0,
-        dateofbirth: "nothing",
+        dateofbirth: 0000-00-00,
         firstname: playerfirstname,
         lastname: playerlastname,
         sportid: 0,

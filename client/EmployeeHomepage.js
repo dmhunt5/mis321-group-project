@@ -9,7 +9,7 @@ async function handleOnLoadFour(){
       populateDropdown(data);
   })
   .catch(error => console.error('Error fetching data:', error));
-  
+
     let html =`
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -24,7 +24,7 @@ async function handleOnLoadFour(){
                 Accounts
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Create Customer Account</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleCustAccount()">Create Customer Account</a></li>
               </ul>
             </li>
           </ul>
@@ -39,7 +39,7 @@ async function handleOnLoadFour(){
                 Reports
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">View Report</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleView()">View Report</a></li>
               </ul>
             </li>
           </ul>
@@ -78,21 +78,13 @@ async function handleOnLoadFour(){
           dropdown.appendChild(option);
       });
     }
-    // async function populateTable(){
-    //     let html = `
-    //     <table class ="table table-hover" id="table1">
-    //     <tr>
-    //     <th > Team 1 </th>
-    //     <th> Team 2 </th>
-    //     <th> Team 3 </th> 
-    //     </tr>`;
-    //     // myTeams.forEach(function(team){
-    //     //         html += `
-    //     //         <tr>
-    //     //                 <td> ${team.name}</td>
+
+
+    async function handleCustAccount(){
+      window.location.href = "./createcustacc.html"
+    }
+
+    async function handleView(){
+      window.location.href = "./viewreport.html"
+    }
     
-    //     //         </tr>`
-    //     // })
-    //     html += `</table>`
-    //     document.getElementById('tableBody').innerHTML = html 
-    // }

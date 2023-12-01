@@ -41,7 +41,7 @@ div.scroll-container img {
     margin-top: 20px;
 }
 .banner2{
-    background-color:mediumpurple;
+    background-color:rgba(175, 150, 224, 0.631);
     color: white;
     text-align:center;
     padding: 80px 0px;
@@ -129,6 +129,8 @@ div.scroll-container img {
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
 }
 
+
+
 #pagebackground{
     background-image:url('./background.webp');
     background-size: cover;
@@ -214,3 +216,4 @@ color: #777;
 #calendar {
 list-style-type: none;
 }
+

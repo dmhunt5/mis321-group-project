@@ -25,7 +25,8 @@ let html =`
             Accounts
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Create Account</a></li>
+            <li><a class="dropdown-item" href="#" onclick="handleCustAccount()">Create Customer Account</a></li>
+            <li><a class="dropdown-item" href="#" onclick="handleEmpAccount()">Create Employee Account</a></li>
           </ul>
         </li>
       </ul>
@@ -40,8 +41,7 @@ let html =`
             Reports
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Create Report</a></li>
-            <li><a class="dropdown-item" href="#">Edit Report</a></li>
+            <li><a class="dropdown-item" href="#" onclick="handleReportCreate()">Create Report</a></li>
           </ul>
         </li>
       </ul>
@@ -120,6 +120,18 @@ async function handleClickForPlayerAdd(){
 
 async function handleClickForRemove(){
   window.location.href = "./editTeam.html"
+}
+
+async function handleCustAccount(){
+  window.location.href = "./createcustacc.html"
+}
+
+async function handleEmpAccount(){
+  window.location.href = "./createempacc.html"
+}
+
+async function handleReportCreate(){
+  window.location.href = "./createreport.html"
 }
 // async function clickForTeamRosters(){
   

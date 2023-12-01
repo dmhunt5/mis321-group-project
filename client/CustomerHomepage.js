@@ -52,7 +52,7 @@ async function handleOnLoadThree(){
                 Events
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">View Schedule</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleSchedule()">View Schedule</a></li>
               </ul>
             </li>
           </ul>
@@ -94,6 +94,9 @@ async function handleOnLoadThree(){
   });
 }
 
+async function handleSchedule(){
+  window.location.href = "./TeamSchedule.html"
+}
     // async function populateTable(){
     //     let html = `
     //     <table class ="table table-hover" id="table1">

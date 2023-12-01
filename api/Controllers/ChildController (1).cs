@@ -33,7 +33,8 @@ namespace api.Controllers
         [HttpPost]
         public void Post([FromBody] Child value)
         {
-        
+            ChildUtility utility = new ChildUtility();
+            utility.createChild(value);
         }
 
         // PUT: api/User
