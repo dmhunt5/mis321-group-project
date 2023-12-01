@@ -163,6 +163,7 @@ async function populateDropdown(data) {
     const selectedValue = event.target.value;
     //table stuff goes here 
     //api call here and then log it 
+    //do a get then populate a table that has a header of Player's Names and then each row is a players name
 
     console.log('Selected value:', selectedValue);
   // You can add more functionality here based on the selected value

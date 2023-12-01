@@ -22,7 +22,7 @@ async function handleOnLoadThree(){
                 Sports
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Register a Child</a></li>
+                <li><a class="dropdown-item" href="#" onclick="registerChild()">Register a Child</a></li>
               </ul>
             </li>
           </ul>
@@ -97,21 +97,8 @@ async function handleOnLoadThree(){
 async function handleSchedule(){
   window.location.href = "./TeamSchedule.html"
 }
-    // async function populateTable(){
-    //     let html = `
-    //     <table class ="table table-hover" id="table1">
-    //     <tr>
-    //     <th > Team 1 </th>
-    //     <th> Team 2 </th>
-    //     <th> Team 3 </th> 
-    //     </tr>`;
-    //     // myTeams.forEach(function(team){
-    //     //         html += `
-    //     //         <tr>
-    //     //                 <td> ${team.name}</td>
+
+async function registerChild(){
+  window.location.href = "./registerChild.html"
+}
     
-    //     //         </tr>`
-    //     // })
-    //     html += `</table>`
-    //     document.getElementById('tableBody').innerHTML = html 
-    // }

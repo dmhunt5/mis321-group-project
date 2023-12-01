@@ -21,5 +21,19 @@ namespace api.Models
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        public void addVolunteer(Customer customer){
+            Database db = new Database();
+            MySqlConnection con = new MySqlConnection(db.cs);
+            con.Open();
+            string stm = "insert into customer (volunteerrole, gameid) values ( @volunteerrole, @gameid);";
+            MySqlCommand cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@volunteerrole", customer.volunteerrole);
+            cmd.Parameters.AddWithValue("@gameid", customer.gameid);
+            
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
