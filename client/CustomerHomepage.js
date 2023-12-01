@@ -37,11 +37,12 @@ async function handleOnLoadThree(){
                 Volunteering
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Register for an Event</a></li>
+                <li><a class="dropdown-item" href="#" onclick="handleRegister()">Register for an Event</a></li>
               </ul>
             </li>
           </ul>
         </div>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -95,10 +96,14 @@ async function handleOnLoadThree(){
 }
 
 async function handleSchedule(){
-  window.location.href = "./TeamSchedule.html"
+  window.location.href = "./CustomerTeamSchedule.html"
 }
 
 async function registerChild(){
   window.location.href = "./registerChild.html"
+}
+
+async function handleRegister(){
+  window.location.href = "./registerVolunteer.html"
 }
     

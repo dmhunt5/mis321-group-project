@@ -57,8 +57,8 @@ let html =`
             Events
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Create an Event</a></li>
-            <li><a class="dropdown-item" href="#">Edit an Event</a></li>
+            <li><a class="dropdown-item" href="#" onclick="handleAdd()">Create an Event</a></li>
+            
           </ul>
         </li>
       </ul>
@@ -138,6 +138,10 @@ async function handleEmpAccount(){
 
 async function handleReportCreate(){
   window.location.href = "./createreport.html"
+}
+
+async function handleAdd(){
+  window.location.href = "./AdminTeamSchedule.html"
 }
 // async function clickForTeamRosters(){
   
