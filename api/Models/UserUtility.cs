@@ -21,7 +21,7 @@ namespace api.Models
                 while(rdr.Read()){
                    User user = new User(){
                     
-                        userId = rdr.GetInt32(0),
+                        userid = rdr.GetInt32(0),
                         username = rdr.GetString(1),
                         password = rdr.GetString(2),
                     
@@ -50,6 +50,23 @@ namespace api.Models
             };
             con.Close();
             return userid;
+        }
+
+
+        public void CreateUser(User user){
+            Database db = new Database();
+            MySqlConnection con = new MySqlConnection(db.cs);
+            con.Open();
+            string stm = @"INSERT INTO user(userid, username, password)
+            VALUES(@userid, @username, @password)";
+            MySqlCommand cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@userid", user.userid);
+            cmd.Parameters.AddWithValue("@username", user.username);
+            cmd.Parameters.AddWithValue("@password", user.password);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
         }
 
         

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<div class='container'>
+    <div class='window'>
+      <div class='order-info'>
+        <div class='order-info-content'>
+          <h2>Order Summary</h2>
+                  <div class='line'></div>
+          <table class='order-table'>
+ 
+ 
+          </table>
+          <div class='line'></div>
+          <table class='order-table'>
+ 
+          </table>
+          <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img src='./styles/MicrosoftTeams-image.png' class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Child Sport Registration</span>
+                  <br>$5 per<br> <span class='thin small'></span>
+                 
+                  <script src="C:\Users\ashto\Desktop\MIS321\mis321-group-project\client\checkout.js"></script>
+ 
+                  <div class="cart-item bg-light p-5">
+ 
+                    <div class="cart-product-info">
+                     <div class="d-block">
+ 
+                      <div class="input-group mb-3">
+                       <div class="input-group-prepend">
+                        <span class="input-group-text btn sub-quantity-cart">-</span>
+                       </div>
+                       <input type="text" class="form-control quantity" value="2" />
+                       <div class="input-group-append">
+                         <span class="input-group-text btn add-quantity-cart">+</span>
+                       </div>
+                     </div>
+                    </div>
+                   </div>
+ 
+ 
+                </td>
+ 
+              </tr>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+          <div class='line'></div>
+          <div class='total'>
+            <span style='float:left;'>
+             
+            </span>
+            <span style='float:right; text-align:right;'>
+              placeholder
+            </span>
+          </div>
+  </div>
+  </div>
+          <div class='credit-info'>
+            <div class='credit-info-content'>
+              <table class='half-input-table'>
+                <tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>Visa</div>
+                  <div class='dropdown-select'>
+                    <button></button>
+                  <ul>
+                    <li>Master Card</li>
+                    <li>American Express</li>
+                    <li>Cash</li>
+                    </ul></div>
+                    
+                  </div>
+                 </td></tr>
+              </table>
+              <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+              Card Number
+              <input class='input-field'></input>
+              Card Holder
+              <input class='input-field'></input>
+              <table class='half-input-table'>
+                <tr>
+                  <td> Expires
+                    <input class='input-field'></input>
+                  </td>
+                  <td>CVC
+                    <input class='input-field'></input>
+                  </td>
+                </tr>
+              </table>
+              <button class='pay-btn' onclick="registerChild.html">Checkout</button>
+ 
+            </div>
+ 
+          </div>
+        </div>
+  </div>

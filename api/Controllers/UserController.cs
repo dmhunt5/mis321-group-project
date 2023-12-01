@@ -31,9 +31,10 @@ namespace api.Controllers
 
         // POST: api/User
         [HttpPost]
-        public void Post([FromBody] string nothing)
+        public void Post([FromBody] User value)
         {
-            
+            UserUtility utility = new UserUtility();
+            utility.CreateUser(value);
         }
 
         // PUT: api/User

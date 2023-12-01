@@ -2,7 +2,7 @@ namespace api.Models
 {
     public class User
     {
-        public int userId{get;set;}
+        public int userid{get;set;}
 
         public string username{get;set;}
 

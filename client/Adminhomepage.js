@@ -74,7 +74,7 @@ let html =`
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#" onclick = "handleClickForAdd()" >Create a Team</a></li>
             <li><a class="dropdown-item" href="#" onclick = "handleClickForPlayerAdd()" >Add Players to Team</a></li>
-            <li><a class="dropdown-item" href="#">Remove Players from Team</a></li>
+            <li><a class="dropdown-item" href="#" onclick = "handleClickForRemove()">Remove Players from Team</a></li>
           </ul>
         </li>
       </ul>
@@ -117,6 +117,10 @@ async function handleClickForAdd(){
 async function handleClickForPlayerAdd(){
   window.location.href ="./AddPlayer.html"
 }
+
+async function handleClickForRemove(){
+  window.location.href = "./editTeam.html"
+}
 // async function clickForTeamRosters(){
   
 //   const response = await fetch(teamurl,{
@@ -146,11 +150,11 @@ async function populateDropdown(data) {
     // The value of the selected option is available in event.target.value
     const selectedValue = event.target.value;
     //table stuff goes here 
-
+    //api call here and then log it 
 
     console.log('Selected value:', selectedValue);
   // You can add more functionality here based on the selected value
-});
+  });
 
   // Clear existing options
   dropdown.innerHTML = '';
