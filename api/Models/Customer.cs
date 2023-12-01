@@ -15,5 +15,7 @@ namespace api.Models
         public int childid{get;set;}
 
         public int sportid{get;set;}
+
+        public int gameid{get;set;}
     }
 }

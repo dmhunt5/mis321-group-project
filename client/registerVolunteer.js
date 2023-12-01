@@ -61,7 +61,7 @@ async function handleVolunteer(){
         volunteerrole: document.getElementById('volunteerrole').value,
         userid:0,
         childid:0,
-        gameid: something, //you'll have to figure out how to pull the gameid
+        gameid: 0, //you'll have to figure out how to pull the gameid
         sportid:sportId
         };
     myVolunteers.push(customer);
