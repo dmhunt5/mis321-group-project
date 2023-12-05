@@ -4,13 +4,9 @@ const url = "http://localhost:5291/api/Report/"
 
 function handleOnLoad() {
     let html=`
-    <nav class="navbar">
-        <ul>
-                <a href="">
-                    <img src="./styles/home.png" height="50">
-                </a>
-        </ul>
-    </nav>
+    <button onclick = "handleBackToHome()" class = "homebutton">
+    <img src="./styles/home.png" class ="checkoutButton">
+  </button>
     <div class="banner">
         <img src="./styles/Tuscaloosa_Sports_Association_Transparent.png" id="tsa-logo">
     </div>
@@ -64,3 +60,7 @@ async function handleReportCreate() {
     document.getElementById('sballreg').value='';
     document.getElementById('repcomments').value='';
 }
+
+async function handleBackToHome(){
+    window.location.href = "./Adminhomepage.html"
+  }

@@ -7,16 +7,12 @@ const customerUrl = "http://localhost:5291/api/Customer/"
 
 function handleOnLoad() {
     let html=`
-    <nav class="navbar">
-        <ul>
-                <a href="">
-                    <img src="./styles/home.png" height="50">
-                </a>
-        </ul>
-    </nav>
+    <button onclick = "handleBackToHome()" class = "homebutton">
+      <img src="./styles/home.png" class ="checkoutButton">
+    </button>
     <div class="banner">
         <img src="./styles/Tuscaloosa_Sports_Association_Transparent.png" id="tsa-logo">
-    </div>
+    </div> 
     <br>
     <section class="vh-100">
     <div class="container h-100">
@@ -146,8 +142,13 @@ async function handleAccountAdd() {
     })
   })
 
+
     // document.getElementById('firstname').value='';
     // document.getElementById('lasttname').value='';
     // document.getElementById('username').value='';
     // document.getElementById('password').value='';
+}
+
+async function handleBackToHome(){
+  window.location.href = "./Adminhomepage.html"
 }

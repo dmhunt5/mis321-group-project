@@ -81,7 +81,7 @@ async function handleOnLoadFour(){
 
 
     async function handleCustAccount(){
-      window.location.href = "./createcustacc.html"
+      window.location.href = "./createCustAccountEmp.html"
     }
 
     async function handleView(){

@@ -58,7 +58,7 @@ async function handleOnLoadThree(){
             </li>
           </ul>
         </div>
-        <button>
+        <button onclick = "handleCheckout()">
             <img src="./styles/cart.jpg" class ="checkoutButton">
         </button>
       </div>
@@ -105,5 +105,9 @@ async function registerChild(){
 
 async function handleRegister(){
   window.location.href = "./registerVolunteer.html"
+}
+
+async function handleCheckout(){
+  window.location.href = "./checkout.html"
 }
     

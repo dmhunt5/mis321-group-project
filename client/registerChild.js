@@ -72,3 +72,6 @@ async function handleChildAdd(){
     document.getElementById('lastname').value='';
     document.getElementById('dateofbirth').value='';
 }
+async function handleBackToHome(){
+    window.location.href = "./CustomerHomepage.html"
+}

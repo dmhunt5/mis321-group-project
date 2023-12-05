@@ -271,3 +271,7 @@ function handleDayClick(day, month, year)
     <h1><button onclick="loadCalendar()">Back</button>Please choose the event you would like to volunteer for:</h1>`
     document.getElementById('back').innerHTML = html;
 }
+
+async function handleBackToHome(){
+    window.location.href = "./CustomerHomepage.html"
+}
