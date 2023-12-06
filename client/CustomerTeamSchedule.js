@@ -31,6 +31,11 @@ function handleOnLoad()
     <ul class="days" id="days">
     </ul>`;
     document.getElementById("app").innerHTML = html;
+
+    html=`
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html; 
     let numDays = daysInMonth();
     html = ``;
     console.log(d.getMonth());
@@ -83,6 +88,11 @@ function movePrevMonth()
         </ul>`;
     document.getElementById("changeMonth").innerHTML = html;
 
+    html=`
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html;
+
     html = ``;
     for (let i = 1; i <= numDays; i++) 
     {
@@ -123,6 +133,11 @@ function moveNextMonth()
           <li>${monthName}<br><span style="font-size:18px">${year}</span></li>
         </ul>`;
     document.getElementById("changeMonth").innerHTML = html;
+
+    html=`
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html; 
     
     let numDays = daysInMonth();
 
@@ -177,5 +192,10 @@ function handleOnClick(day, month, year)
         }
     })
     html+=`</table>`
-    document.getElementById('tableBody').innerHTML = html;
+    document.getElementById('app').innerHTML = html;
+
+    html=`
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html; 
 }

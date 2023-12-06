@@ -51,6 +51,11 @@ async function handleRegisterOnLoad(gameid){
     </div>
     `
     document.getElementById('app').innerHTML=html
+
+    html=`
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html; 
 }
 
 async function handleVolunteer(gameid){
@@ -107,6 +112,11 @@ function loadCalendar()
     <ul class="days" id="days">
     </ul>`;
     document.getElementById("app").innerHTML = html;
+
+    html=`
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html; 
     let numDays = daysInMonth();
     html = ``;
     console.log(d.getMonth());
@@ -159,6 +169,11 @@ function movePrevMonth()
         </ul>`;
     document.getElementById("changeMonth").innerHTML = html;
 
+    html=`
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html; 
+
     html = ``;
     for (let i = 1; i <= numDays; i++) 
     {
@@ -201,6 +216,11 @@ function moveNextMonth()
           <li>${monthName}<br><span style="font-size:18px">${year}</span></li>
         </ul>`;
     document.getElementById("changeMonth").innerHTML = html;
+
+    html=`
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html; 
     
     let numDays = daysInMonth();
 
@@ -268,8 +288,9 @@ function handleDayClick(day, month, year)
     document.getElementById('app').innerHTML = html;
 
     html=`
-    <h1><button onclick="loadCalendar()">Back</button>Please choose the event you would like to volunteer for:</h1>`
-    document.getElementById('back').innerHTML = html;
+    <a href="./CustomerHomepage.html">Home</a>`;
+
+    document.getElementById('button').innerHTML = html; 
 }
 
 async function handleBackToHome(){
