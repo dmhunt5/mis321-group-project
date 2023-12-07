@@ -89,22 +89,6 @@ function handleOnLoad() {
     document.getElementById('app').innerHTML=html;
 }
 
-// function populateTable() {
-//     myAccounts.forEach(function(account) {
-//         if(account.AccountType==undefined) {
-//             account.AccountType = 1;
-//         }
-//         html += `
-//         <tr>
-//             <td>${account.FirstName}</td>
-//             <td>${account.LastName}</td>
-//             <td>${account.Email}</td>
-//             <td>${account.Password}</td>
-//             <td>${account.AccountType}</td>
-//         </tr>`;
-//     })
-//     document.getElementById('tableBody').innerHTML = html;
-// }
 
 async function handleAccountAdd() {
    
@@ -143,10 +127,10 @@ async function handleAccountAdd() {
   })
 
 
-    // document.getElementById('firstname').value='';
-    // document.getElementById('lasttname').value='';
-    // document.getElementById('username').value='';
-    // document.getElementById('password').value='';
+    document.getElementById('firstname').value='';
+    document.getElementById('lastname').value='';
+    document.getElementById('username').value='';
+    document.getElementById('password').value='';
 }
 
 async function handleBackToHome(){

@@ -32,7 +32,7 @@ function handleOnLoad() {
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example1c">First Name</label>
-                        <input type="text" id="form3Example1c" class="form-control" />
+                        <input type="text" id="firstname" class="form-control" />
                       </div>
                     </div>
   
@@ -40,7 +40,7 @@ function handleOnLoad() {
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example1c">Last Name</label>
-                        <input type="text" id="form3Example1c" class="form-control" />
+                        <input type="text" id="lastname" class="form-control" />
                       </div>
                     </div>
 
@@ -138,6 +138,10 @@ async function handleAccountAdd() {
     })
   })
 
+    document.getElementById('firstname').value='';
+    document.getElementById('lastname').value='';
+    document.getElementById('username').value='';
+    document.getElementById('password').value='';
 }
 
 async function handleBackToHome(){

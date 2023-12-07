@@ -36,7 +36,7 @@ async function handleOnLoad() {
         </tr>`
     });
     html+= `</tbody></table>
-    </div><
+    </div>
     </div>
     <div id="pagebackground"> <br><br><br><br><br><br><br><br><br><br></div>`;
    

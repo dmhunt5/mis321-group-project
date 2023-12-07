@@ -60,7 +60,7 @@ async function handleTeamAdd(){
         },
         body: JSON.stringify(team),
     })
-    //handleOnLoad();
+    
     document.getElementById('teamname').value='';
     
 }

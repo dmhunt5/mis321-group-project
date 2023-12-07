@@ -60,7 +60,7 @@ async function handleLogin(){
       const accountType = document.getElementById('accountType').value
       console.log(username);
       console.log(password);
-//try{
+
    const response = await fetch(url + username + "/" + password,{
         method: "GET",
         headers: {
@@ -90,7 +90,5 @@ async function handleLogin(){
       }
     }
     
-  // } catch (error){
-  //   console.error('An error ocurred:', error);
-  // }
+  
 }

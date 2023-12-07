@@ -21,15 +21,13 @@ namespace api.Controllers
             List<Team> teams = TeamUtility.GetAllTeams();
             return teams;
         }
-        //GET: api/User/5
-        //[Route("{teamid}")]
-        // [HttpGet("{teamid}")]
-        // public int Get(int value)
-        // {
-        //     ChildUtility utility = new ChildUtility();
-        //     List<Child> players = utility.GetPlayerNames(value);
-        //     return players;
-        // }
+
+        [HttpGet("GetPlayerNames/{teamid}")]
+        public List<Child> GetPlayerNames(int teamid)
+        {
+            return ChildUtility.GetPlayerNames(teamid);
+        }
+       
 
         // POST: api/User
         [HttpPost]

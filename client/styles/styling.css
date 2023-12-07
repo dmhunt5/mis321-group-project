@@ -229,3 +229,16 @@ list-style-type: none;
   width: 100%;
 }
 
+#playersTable{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 25px;
+}
+
+#playersTable td:first-child{
+    text-align: right;
+}
+
+#playersTable td:last-child{
+    text-align: left;
+}

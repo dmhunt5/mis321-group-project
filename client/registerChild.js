@@ -67,7 +67,7 @@ async function handleChildAdd(){
         },
         body: JSON.stringify(child),
     })
-    //handleOnLoad();
+   
     document.getElementById('firstname').value='';
     document.getElementById('lastname').value='';
     document.getElementById('dateofbirth').value='';

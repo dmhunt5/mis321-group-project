@@ -1,5 +1,6 @@
 const url = "http://localhost:5291/api/Team/"
 const playerUrl =  "http://localhost:5291/api/Child/"
+const playerNameUrl = "http://localhost:5291/api/Child/GetPlayerNames/"
 let myTeams = []
 
 async function handleOnLoadTwo(){
@@ -83,37 +84,29 @@ let html =`
   </div>
 </nav><br><br><br>
 
+<div class="header2">
+    <h1> Teams </h1>
+</div><br><br><br>
+
     <div>
           <label for="teamRosterDropdown">Team Rosters</label>
           <select name="teamRosterDropdown" id="myDropdown" class="form-control">PLACEHOLDER</select>
     </div>
 
-<div class="header2">
-    <h1> Teams </h1>
+
+<div>
+<table id="playersTable">
+  <caption> Team Players </caption>
+</table>
+<div id="detailsContainer"></div>
 </div>
 
-<table id="playerTable">
-</table>
-
-<div id="detailsContainer"></div>
+<div id=detailsContainer"></div>
 `
-// <div id="teamPlayerContainer"></div>
-
-//         fetch('fetch_data.php')
-//             .then(response => response.json())
-//             .then(data => {
-              
-//                 const container = document.getElementById('teamPlayerContainer');
-//                 data.forEach(item => {
-//                     container.innerHTML += `<p><strong>${item.team_name}</strong>: ${item.player_name}</p>`;
-//                 });
-//             })
-//             .catch(error => console.error('Error fetching data:', error));
-  
 
 
 document.getElementById('app2').innerHTML=html;
-//populateTable();
+
 }
 
 async function handleClickForAdd(){
@@ -143,72 +136,42 @@ async function handleReportCreate(){
 async function handleAdd(){
   window.location.href = "./AdminTeamSchedule.html"
 }
-// async function clickForTeamRosters(){
-  
-//   const response = await fetch(teamurl,{
-//   method: "GET",
-//   headers: {
-//     accepts: '*/*',
-//     "Content-type" : "application/json",
-//   }
-// }) 
-// const data = await response.json();
-// console.log(data)
-
-//   // Populate the dropdown with options
-//   dataFromServer.forEach(function (item) {
-//       var option = document.createElement('option');
-//       option.value = item.value;
-//       option.text = item.text;
-//       dropdown.appendChild(option);
-//   });
-// });
 
 // Function to populate the dropdown
 async function populateDropdown(data) {
   const dropdown = document.getElementById('myDropdown');
+  const playersTable = document.getElementById('playersTable');
 
   dropdown.addEventListener('change', async function(event) {
-    // The value of the selected option is available in event.target.value
     const selectedValue = event.target.value;
 
-    playersTable = document.getElementById('playersTable');
-    detailsContainer = document.getElementById('detailsContainer')
-    
+      playersTable.innerHTML=` `;
 
-  
-      const dataResponse = await fetch(url + data.teamname);
-      const teamid = await dataResponse.json();
+      const teamResponse = await fetch(url + selectedValue);
+      const teamData = await teamResponse.json();
 
-      const playersResponse = await fetch(playerUrl + teamid);
-      const playersData = await playersResponse.json();
+      const playersResponse = await fetch(`${playerNameUrl}${teamData}`);
+      const playerData = await playersResponse.json();
       
-      playersData.forEach(player =>{
+      playerData.forEach(player =>{
         playersTable.innerHTML += `
         <tr>
-            <td>${playersData.name}</td>
-
+            <td>${player.firstname}</td>
+            <td>${player.lastname}</td>
         </tr>`
       });
     
-   
-    //table stuff goes here 
-    //api call here and then log it 
-    //do a get then populate a table that has a header of Player's Names and then each row is a players name
-
     console.log('Selected value:', selectedValue);
-  // You can add more functionality here based on the selected value
+  
   });
-
-  // Clear existing options
+  
   dropdown.innerHTML = '';
 
-  // Add new options from the fetched data
   data.forEach(item => {
     console.log(item);
       const option = document.createElement('option');
-      option.value = item.teamname;  // Assuming each item has a 'value' property
-      option.textContent = item.teamname;  // And a 'text' property
+      option.value = item.teamname;  
+      option.textContent = item.teamname;  
       console.log(option);
       dropdown.appendChild(option);
   });
@@ -218,21 +181,3 @@ async function populateDropdown(data) {
 
 
 
-// async function populateTable(){
-//     let html = `
-//     <table class ="table table-hover" id="table1">
-//     <tr>
-//     <th > Team 1 </th>
-//     <th> Team 2 </th>
-//     <th> Team 3 </th> 
-//     </tr>`;
-//     // myTeams.forEach(function(team){
-//     //         html += `
-//     //         <tr>
-//     //                 <td> ${team.name}</td>
-
-//     //         </tr>`
-//     // })
-//     html += `</table>`
-//     document.getElementById('tableBody').innerHTML = html 
-// }
