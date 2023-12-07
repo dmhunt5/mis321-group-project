@@ -180,6 +180,7 @@ function handleOnClick(day, month, year)
         </tr>`;
     events.forEach(function(event) {
         let eventdates = event.dateOfGame.split("-");
+        console.log(eventdates + "EVENT DATES");
         if(eventdates[0] == day && eventdates[1] == month + 1 && eventdates[2] == year)
         {
             html += `

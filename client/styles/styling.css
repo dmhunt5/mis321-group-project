@@ -217,3 +217,15 @@ color: #777;
 list-style-type: none;
 }
 
+.navbar li{
+    display: inline;
+    padding: 0px 20px;
+}
+
+.navbar{
+  background-color: orange;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+

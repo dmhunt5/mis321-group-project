@@ -29,7 +29,8 @@ function handleOnLoad()
     </ul>
     
     <ul class="days" id="days">
-    </ul>`;
+    </ul>
+    <div id="formSubmit"></div>`;
     document.getElementById("app").innerHTML = html;
 
     html=`
@@ -55,6 +56,33 @@ function handleOnLoad()
     }
 
     document.getElementById("days").innerHTML = html;
+    
+    html=`    
+    <form onsubmit="return false">
+        <label for="dateOfGame">Date of game (DD-MM-YYYY):</label><br>
+        <input type="text" id="dateOfGame" name="dateOfGame"><br>
+        <label for="timeOfGame">Time of game (00:00):</label><br>
+        <input type="text" id="timeOfGame" name="timeOfGame"><br>
+        <label for="teamId">Team 1 ID</label><br>
+        <input type="text" id="teamId" name="teamId"><br>
+        <label for="opponentId">Team 2 ID</label><br>
+        <input type="text" id="opponentId" name="opponentId">
+        <button onclick="addEvent()" class="btn btn-primary">Save</button>
+    </form>`;
+    document.getElementById('formSubmit').innerHTML=html;
+}
+
+async function addEvent() {
+    let event = {DateOfGame: document.getElementById('dateOfGame').value, TimeOfGame: document.getElementById('timeOfGame').value, TeamId: document.getElementById('teamId').value, OpponentId: document.getElementById('opponentId').value};
+
+    await fetch(baseUrl + "/TeamSchedules", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json;charset=UTF-8"
+        },
+        body: JSON.stringify(event)
+    })
+    getTeamSchedules();
 }
 
 function daysInMonth() 
@@ -177,23 +205,8 @@ async function getTeamSchedules()
 function handleOnClick(day, month, year)
 {
     console.log(events)
-    let html=`
-    <div id="tableBody"></div>
-    
-    <form onsubmit="return false">
-        <label for="dateOfGame">Date of game (DD-MM-YYYY):</label><br>
-        <input type="text" id="dateOfGame" name="dateOfGame"><br>
-        <label for="timeOfGame">Time of game (00:00):</label><br>
-        <input type="text" id="timeOfGame" name="timeOfGame"><br>
-        <label for="teamId">Team 1 ID</label><br>
-        <input type="text" id="teamId" name="teamId"><br>
-        <label for="opponentId">Team 2 ID</label><br>
-        <input type="text" id="opponentId" name="opponentId">
-        <button onclick="addGame()" class="btn btn-primary">Save</button>
-    </form>`;
-    document.getElementById('app').innerHTML=html;
 
-    html= `
+    let html= `
     <table class="table table-striped">
         <tr>
             <th>Date of game</th>
@@ -220,5 +233,15 @@ function handleOnClick(day, month, year)
         }
     })
     html+=`</table>`
-    document.getElementById('tableBody').innerHTML = html;
+    document.getElementById('app').innerHTML = html;
+
+    html=`
+    <nav class="navbar">
+        <ul>
+            <li><a href="./AdminHomepage.html">Home</a></li>
+            <li><a href="./AdminTeamSchedule.html">Back</a></li>
+        </ul>
+    </nav>`;
+
+    document.getElementById('button').innerHTML = html;
 }
