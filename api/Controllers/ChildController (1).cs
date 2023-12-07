@@ -43,8 +43,9 @@ namespace api.Controllers
         // PUT: api/User
         [HttpPut]
         public void Put([FromBody] Child value)
-        {   
+        {   Console.WriteLine("here");
             ChildUtility utility = new ChildUtility();
+            
             utility.addPlayerToTeam(value);
         }
 

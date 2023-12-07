@@ -4,7 +4,7 @@ namespace api.Models
     {
         public int childid {get;set;}
 
-        public DateTime dateofbirth{get;set;}
+        public DateTime? dateofbirth{get;set;}
 
         public string firstname{get;set;}
 

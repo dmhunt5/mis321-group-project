@@ -62,7 +62,7 @@ async function handleOnLoadThree(){
             <img src="./styles/cart.jpg" class ="checkoutButton">
         </button>
       </div>
-    </nav>
+    </nav><br><br><br>
 
     <div>
           <label for="teamRosterDropdown">Team Rosters</label>

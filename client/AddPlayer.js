@@ -64,7 +64,6 @@ async function handlePlayerAdd(){
     
    let child = {
     childid: 0,
-    dateofbirth: 0000-00-00,
     firstname: playerfirstname,
     lastname: playerlastname,
     sportid: 0,
