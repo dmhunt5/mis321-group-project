@@ -31,9 +31,9 @@ async function handleRegisterOnLoad(gameid){
             <div>
             <label for="volunteerrole">Choose Volunteer Role</label><br>
             <select id="volunteerrole" name="volunteerrole">
-              <option value="Softball">Umpire</option>
-              <option value="Baseball">Concession Stand</option>
-              <option value="Baseball">Assistant Coach</option>
+              <option value="Umpire">Umpire</option>
+              <option value="Concession Stand">Concession Stand</option>
+              <option value="Assistant">Assistant Coach</option>
             </select>
             <div class="dropdown">
             <div>
@@ -77,8 +77,9 @@ async function handleVolunteer(gameid){
         sportid:sportId
         };
     myVolunteers.push(customer);
+    console.log(customer);
     await fetch(baseUrl + "/Customer",{
-        method: "POST",
+        method: "PUT",
         headers: {
             accepts: '*/*',
             "Content-type" : "application/json"
@@ -230,6 +231,7 @@ function moveNextMonth()
     html = ``;
     for (let i = 1; i <= numDays; i++) 
     {
+        console.log(i, monthNum, year);
         if(monthNum == d.getMonth() && i == d.getDate())
         {
             html += `
@@ -270,7 +272,7 @@ function handleDayClick(day, month, year)
     events.forEach(function(event) {
         let eventdates = event.dateOfGame.split("-");
         console.log(eventdates, "EVENT DATES");
-        if(eventdates[0] == day && eventdates[1] == month + 1 && eventdates[2] == year)
+        if(eventdates[0] == month +1 && eventdates[1] == day && eventdates[2] == year)
         {
             html += `
             <tr>

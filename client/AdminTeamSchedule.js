@@ -219,7 +219,7 @@ function handleOnClick(day, month, year)
     events.forEach(function(event) {
         let eventdates = event.dateOfGame.split("-");
         console.log(eventdates, "EVENT DATES")
-        if(eventdates[0] == day && eventdates[1] == month + 1 && eventdates[2] == year)
+        if(eventdates[0] == month + 1 && eventdates[1] == day && eventdates[2] == year)
         {
             html += `
             <tr>
@@ -227,8 +227,6 @@ function handleOnClick(day, month, year)
             <td>${event.timeOfGame}</td>
             <td>${event.teamId}</td>
             <td>${event.opponentId}</td>
-            
-            <td><button class="btn btn-danger" onclick="deleteEvent('${event.gameId}')">Delete</button></td>
             </tr>`;
         }
     })

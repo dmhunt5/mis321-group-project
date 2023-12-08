@@ -4,9 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using api.interfaces;
+using api.Interfaces;
 using api.models;
 using api.DataAccess;
+using api.Models;
 
 namespace api.controllers
 {
@@ -32,8 +33,9 @@ namespace api.controllers
 
         // POST: api/TeamSchedules
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] TeamSchedule teamSchedule)
         {
+            AddTeamSchedules.AddTeamScheduleToTable(teamSchedule);
         }
 
         // PUT: api/TeamSchedules/5

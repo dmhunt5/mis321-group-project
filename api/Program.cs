@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Cors;
+using api.DataAccess;
 using System;
-
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,6 +1,6 @@
 using api.models;
 
-namespace api.interfaces
+namespace api.Interfaces
 {
     public interface IGetTeamSchedules
     {

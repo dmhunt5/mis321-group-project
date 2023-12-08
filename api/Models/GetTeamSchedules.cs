@@ -1,6 +1,6 @@
 using MySql.Data.MySqlClient;
 using MySql.Data;   
-using api.interfaces;
+using api.Interfaces;
 using api.models;
 using api.DataAccess;
 using Microsoft.CodeAnalysis.CSharp.Syntax;

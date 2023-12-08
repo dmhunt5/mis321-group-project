@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using api.Models;
 using api.DataAccess;
 using Microsoft.AspNetCore.Cors;
+using Google.Protobuf.WellKnownTypes;
 
 namespace api.Controllers
 {
@@ -39,10 +40,10 @@ namespace api.Controllers
 
         // PUT: api/User
         [HttpPut]
-        public void Put([FromBody] string nothing)
+        public void Put([FromBody] Customer value)
         {   
-           
-            
+            CustomerUtility utility = new CustomerUtility();
+            utility.addVolunteer(value);
         }
 
         // DELETE: api/User
