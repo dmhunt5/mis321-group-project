@@ -56,8 +56,8 @@ async function handleRegisterOnLoad(gameid){
                     <label for="volunteerrole">Choose Volunteer Role</label><br>
                     <select id="volunteerrole" name="volunteerrole">
                     <option value="Umpire">Umpire</option>
-                    <option value="Concession Stand">Concession Stand</option>
-                    <option value="Assistant">Assistant Coach</option>
+                    <option value="ConcessionStand">Concession Stand</option>
+                    <option value="AssistantCoach">Assistant Coach</option>
                     </select>
                     </div>
                     </div>
