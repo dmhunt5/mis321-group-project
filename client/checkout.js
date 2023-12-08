@@ -58,3 +58,7 @@ $(document).ready(function() {
     }
   });
 });
+
+async function handleBackToHome(){
+  window.location.href = "./CustomerHomepage.html"
+}

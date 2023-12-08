@@ -26,12 +26,14 @@ namespace api.Models
             Database db = new Database();
             MySqlConnection con = new MySqlConnection(db.cs);
             con.Open();
-            string stm = "update customer set volunteerrole = @volunteerrole, gameid = @gameid, sportid = @sportid where customerid = @customerid;";
+            string stm = "UPDATE customer set volunteerrole = @volunteerrole, gameid = @gameId, sportid = @sportid WHERE firstname = @firstname and lastname = @lastname;";
             MySqlCommand cmd = new MySqlCommand(stm, con);
             cmd.Parameters.AddWithValue("@volunteerrole", customer.volunteerrole);
             cmd.Parameters.AddWithValue("@gameid", customer.gameid);
             cmd.Parameters.AddWithValue("@sportid", customer.sportid);
             cmd.Parameters.AddWithValue("@customerid", customer.customerid);
+            cmd.Parameters.AddWithValue("@firstname", customer.firstname);
+            cmd.Parameters.AddWithValue("@lastname", customer.lastname);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
             con.Close();

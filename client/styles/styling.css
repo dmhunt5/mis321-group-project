@@ -8,6 +8,12 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.banner3{
+    background-color:#EAD9EB;
+    text-align:center;
+    padding: 30px 0px;
+}
+
 .header1{
     margin-top:10px;
     text-align:center;
@@ -56,22 +62,25 @@ div.scroll-container img {
  
 
 .header2{
+
     margin-top: 30px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
         color: #fff;
+        
         text-align:left;
         -webkit-animation: glow 1s ease-in-out infinite alternate;
         -moz-animation: glow 1s ease-in-out infinite alternate;
         animation: glow 1s ease-in-out infinite alternate;
+
       }
       
       @-webkit-keyframes glow {
         from {
-          text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #c201b2, 0 0 50px #c201b2, 0 0 60px #c201b2, 0 0 70px #c201b2, 0 0 80px #c201b2;
+          text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fa6203, 0 0 50px #fa6203, 0 0 60px #fa6203, 0 0 70px #fa6203, 0 0 80px #fa6203;
         }
         to {
-          text-shadow: 0 0 20px #fff, 0 0 30px #fa88d6, 0 0 40px #fa88d6, 0 0 50px #fa88d6, 0 0 60px #fa88d6, 0 0 70px #fa88d6, 0 0 80px #fa88d6;
+          text-shadow: 0 0 20px #fff, 0 0 30px #FD7F32, 0 0 40px #FD7F32, 0 0 50px #FD7F32, 0 0 60px #FD7F32, 0 0 70px #FD7F32, 0 0 80px #FD7F32;
         }
 }
 
@@ -117,9 +126,7 @@ div.scroll-container img {
     text-align: center;
 }
 
-.homeButton{
-    position: relative;
-}
+
 
 #card{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -233,12 +240,35 @@ list-style-type: none;
     width: 100%;
     border-collapse: collapse;
     font-size: 25px;
+    background-color: rgba(187, 139, 226, 0.497);
 }
 
 #playersTable td:first-child{
     text-align: right;
+    
 }
 
 #playersTable td:last-child{
     text-align: left;
+    
+}
+
+.navbarLogo{
+    height: 80px;
+    width: 80px;
+}
+
+.homebutton{
+    background-color:#d9e5ebca;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+#sportDropdown{
+    text-align: center;
 }

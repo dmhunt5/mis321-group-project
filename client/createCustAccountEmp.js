@@ -6,13 +6,15 @@ const customerUrl = "http://localhost:5291/api/Customer/"
 
 
 function handleOnLoad() {
-    let html=`
-    <button onclick = "handleBackToHome()" class = "homebutton">
+    let html=` 
+   <div id="pagebackground">
+
+     <button onclick = "handleBackToHome()">
       <img src="./styles/home.png" class ="checkoutButton">
     </button>
-    <div class="banner">
-        <img src="./styles/Tuscaloosa_Sports_Association_Transparent.png" id="tsa-logo">
-    </div> 
+    
+    
+ 
     <br>
     <section class="vh-100">
     <div class="container h-100">
@@ -23,7 +25,7 @@ function handleOnLoad() {
               <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
   
-                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign Up</p>
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Create Customer Account</p>
   
                   <form class="mx-1 mx-md-4">
   
@@ -68,7 +70,7 @@ function handleOnLoad() {
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
   
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                  <img src="./styles/LOGO TSP.png"
                     class="img-fluid" alt="Sample image">
   
                 </div>
@@ -85,7 +87,9 @@ function handleOnLoad() {
     <p></p>
     <br>
     <p></p>
-    <br>`;
+    <br><br><br><br><br><br><br>
+    </div>
+    `;
     document.getElementById('app').innerHTML=html;
 }
 

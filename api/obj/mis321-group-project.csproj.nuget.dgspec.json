@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\dec7gp\\mis321-group-project\\api\\mis321-group-project.csproj": {}
+    "/Users/caitlinjohnson/Documents/mis321/TSA4/mis321-group-project/api/mis321-group-project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\dec7gp\\mis321-group-project\\api\\mis321-group-project.csproj": {
+    "/Users/caitlinjohnson/Documents/mis321/TSA4/mis321-group-project/api/mis321-group-project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\dec7gp\\mis321-group-project\\api\\mis321-group-project.csproj",
+        "projectUniqueName": "/Users/caitlinjohnson/Documents/mis321/TSA4/mis321-group-project/api/mis321-group-project.csproj",
         "projectName": "mis321-group-project",
-        "projectPath": "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\dec7gp\\mis321-group-project\\api\\mis321-group-project.csproj",
-        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\Documents\\Projects\\Professional\\MISFall23\\dec7gp\\mis321-group-project\\api\\obj\\",
+        "projectPath": "/Users/caitlinjohnson/Documents/mis321/TSA4/mis321-group-project/api/mis321-group-project.csproj",
+        "packagesPath": "/Users/caitlinjohnson/.nuget/packages/",
+        "outputPath": "/Users/caitlinjohnson/Documents/mis321/TSA4/mis321-group-project/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/caitlinjohnson/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

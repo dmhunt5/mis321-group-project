@@ -7,13 +7,11 @@ const employeeUrl = "http://localhost:5291/api/Employee/"
 function handleOnLoad() {
     
     let html=`
+    <div id="pagebackground">
     <button onclick = "handleBackToHome()" class = "homebutton">
       <img src="./styles/home.png" class ="checkoutButton">
     </button>
 
-    <div class="banner">
-        <img src="./styles/Tuscaloosa_Sports_Association_Transparent.png" id="tsa-logo">
-    </div>
     <br>
     <section class="vh-100">
     <div class="container h-100">
@@ -73,7 +71,7 @@ function handleOnLoad() {
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
   
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                  <img src="./styles/LOGO TSP.png"
                     class="img-fluid" alt="Sample image">
   
                 </div>
@@ -90,7 +88,8 @@ function handleOnLoad() {
     <p></p>
     <br>
     <p></p>
-    <br>`;
+    <br><br><br><br><br><br><br>
+    </div>`;
     document.getElementById('app').innerHTML=html;
 }
 

@@ -196,7 +196,7 @@ function handleOnClick(day, month, year)
     document.getElementById('app').innerHTML = html;
 
     html=`
-    <a href="./CustomerHomepage.html">Home</a>`;
+    <a href="./CustomerTeamSchedule.html">Back</a>`;
 
     document.getElementById('button').innerHTML = html; 
 }

@@ -4,12 +4,12 @@ const url = "http://localhost:5291/api/Report/"
 
 function handleOnLoad() {
     let html=`
+    <div id="pagebackground">
     <button onclick = "handleBackToHome()" class = "homebutton">
     <img src="./styles/home.png" class ="checkoutButton">
   </button>
-    <div class="banner">
-        <img src="./styles/Tuscaloosa_Sports_Association_Transparent.png" id="tsa-logo">
-    </div>
+  <br><br><br><br>
+  </div>
     <br>
     <form onsubmit="return false" style="border:1px solid #ccc">
       <div class="container">
@@ -29,11 +29,13 @@ function handleOnLoad() {
         <label for="repcomments"><b>Additional Comments:</b></label><br>
         <input type="text" placeholder="Enter any additional comments here (volunteers per event, added/cancelled events, etc.)" id="repcomments" name="repcomments" required><br>
     
-        <button class="button" onclick="handleReportCreate()">Create Report</button>
+        <button class="btn btn-primary btn-lg" onclick="handleReportCreate()">Create Report</button>
     
       </div>
     </form>
-    <br>`;
+    <br>
+    </div>
+    `;
     document.getElementById('app').innerHTML=html;
 }
 

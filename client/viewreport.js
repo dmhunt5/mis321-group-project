@@ -6,13 +6,14 @@ async function handleOnLoad() {
     let response = await fetch(url)
     myReports = await response.json()
     let html =`
-    <div id="pagebackground">
-    <div class="banner2">
-        <img src="./styles/LOGO TSP.png" class="bannerLogo">
-    </div>
+    <div id="pagebackground"> 
     <button onclick = "handleBackToHome()" class = "homebutton">
         <img src="./styles/home.png" class ="checkoutButton">
         </button>
+    <div class="banner2">
+        <img src="./styles/LOGO TSP.png" class="bannerLogo">
+    </div>
+  
         </div>
     <div class="card" id ="card2">
     <table class="table table-striped">

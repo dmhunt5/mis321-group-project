@@ -40,10 +40,10 @@ namespace api.Controllers
 
         // PUT: api/User
         [HttpPut]
-        public void Put([FromBody] Customer value)
+        public void Put([FromBody] Customer customer)
         {   
             CustomerUtility utility = new CustomerUtility();
-            utility.addVolunteer(value);
+            utility.addVolunteer(customer);
         }
 
         // DELETE: api/User

@@ -14,7 +14,7 @@ async function handleOnLoadThree(){
     let html =`
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">TSP</a>
+        <a class="navbar-brand" href="#"><button onclick="handleToLogin()"><img src = "./styles/LOGO TSP.png" class="navbarLogo"></button></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -65,26 +65,58 @@ async function handleOnLoadThree(){
             <img src="./styles/cart.jpg" class ="checkoutButton">
         </button>
       </div>
-    </nav><br><br><br>
-
+    </nav><br><br><br><br>
+   
+<div id="pagebackground">
+    <div class= "scroll-container">
+    <img src="./styles/baseballpic.jpg.webp" id="scrollpic" alt="BB">
+    <img src="./styles/softballpic.jpeg" id="scrollpic" alt="SB">
+    <img src="./styles/youthbaseball.jpeg" id="scrollpic" alt="BB2">
+    <img src="./styles/youthsoftball.jpg" id="scrollpic" alt="SB2">
+    </div>
+ 
     <div class="header2">
     <h1> Teams </h1>
-</div><br><br><br>
-
+    </div><br><br><br>
+  </div>
     <div>
-          <label for="teamRosterDropdown">Team Rosters</label>
+          <label for="teamRosterDropdown">Team Names</label>
           <select name="teamRosterDropdown" id="myDropdown" class="form-control">PLACEHOLDER</select>
     </div>
 
 
 <div>
+
 <table id="playersTable">
   <caption> Team Players </caption>
 </table>
 <div id="detailsContainer"></div>
-</div>
+
 
 <div id=detailsContainer"></div>
+</div>
+<div id="pagebackground">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
     `
     
     document.getElementById('app3').innerHTML=html;
@@ -147,5 +179,9 @@ async function handleRegister(){
 
 async function handleCheckout(){
   window.location.href = "./checkout.html"
+}
+
+async function handleToLogin(){
+  window.location.href = "./loginpage.html"
 }
     
